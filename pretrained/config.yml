@@ -1,0 +1,46 @@
+ALLOW_GROWTH: false
+BACKUP_DIR:
+- model
+- tensorkit
+BATCH_SIZE: 2
+CUDA_VISIBLE_DEVICES: 0
+DEPTH: 3
+EPOCH: 256000
+GAN: sphere
+IN_HDR: false
+LOG_DIR: ./logs
+LOSS_GAN: true
+LOSS_HDR: false
+LR_DECAY: false
+MOMENTUM: 0.9
+MU: null
+NORM: sn
+NO_MASK: true
+N_LOSS_TP: false
+OPT: adam
+OUT_HDR: false
+PATCH_ORI: false
+SAVE_STEP: 1000
+SUMMARY_STEP: 200
+TAG: sphere_d2
+TEST_DIR: ./results
+TEST_DS: ./dataset/kalantari_dataset/test
+TEST_SIZE: 15
+TRAIN_DS: ./dataset/kalantari_dataset/train
+TRAIN_SIZE: 74
+UNETPPS: true
+VAL: true
+VAL_DS: ./dataset/kalantari_dataset/val
+VAL_SIZE: 55
+VGG_CKPT: ./model_zoo/vgg_16.ckpt
+module: unetpp
+random_place: false
+test_hw:
+- 960
+- 1440
+train_hw:
+- 512
+- 512
+val_hw:
+- 256
+- 256
